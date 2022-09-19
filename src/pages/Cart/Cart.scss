@@ -1,0 +1,21 @@
+.cart {
+  .labels {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .total {
+    background-color: aquamarine;
+    font-size: 20px;
+    text-align: right;
+    padding-right: 10vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    p {
+      margin: 0;
+    }
+  }
+}

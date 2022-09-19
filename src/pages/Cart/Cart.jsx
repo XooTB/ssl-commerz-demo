@@ -1,7 +1,7 @@
 import { useState, React, useEffect } from "react";
 import "./Cart.scss";
 import { products } from "./products";
-
+import SSLPayment from "../../components/SSLPayment/SSLPayment";
 import Product from "../../components/Product/Product";
 
 const Cart = () => {
@@ -23,18 +23,28 @@ const Cart = () => {
       })
     );
   }, []);
+
   return (
     <div className="cart">
       <h1>Cart</h1>
-      {items.length > 0 &&
-        items.map((item) => {
-          return <Product item={cartItems[item]} />;
-        })}
+      <div className="products">
+        <div className="product">
+          <h3>Name</h3>
+          <p className="price">Price</p>
+          <p className="qty">Quantity</p>
+        </div>
+        {items.length > 0 &&
+          items.map((item, i) => {
+            return <Product item={cartItems[item]} key={i} />;
+          })}
+      </div>
       <div className="total">
         <p>Total: {total} BDT</p>
       </div>
       <div className="paymentOptions">
-        <button className="sslCom">Pay with SSLCommerz</button>
+        <p>Pay with: </p>
+        <SSLPayment totalValue={total} />
+        <button className="paymentBtn">Bkash</button>
       </div>
     </div>
   );

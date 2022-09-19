@@ -5,8 +5,8 @@ const Product = ({ item }) => {
   return (
     <div className="product">
       <h3>{item.name}</h3>
-      <p>{item.price}</p>
-      <p>{item.qty}</p>
+      <p className="price">{item.price} BDT</p>
+      <p className="qty">{item.qty} Pcs</p>
     </div>
   );
 };

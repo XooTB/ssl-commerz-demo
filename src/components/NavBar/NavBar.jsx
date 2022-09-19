@@ -5,14 +5,18 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className="navbar">
-      <h1>Store X</h1>
+      <h1>
+        <Link to="/" className="navLink">
+          Store X
+        </Link>
+      </h1>
       <ul className="navLinks">
         <Link to="/" className="navLink">
           Home
         </Link>
-        <Link to="/checkout" className="navLink">
+        {/* <Link to="/checkout" className="navLink">
           Checkout
-        </Link>
+        </Link> */}
         <Link to="/cart" className="navLink">
           Cart
         </Link>

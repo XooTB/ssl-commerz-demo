@@ -1,6 +1,21 @@
 .product {
   display: flex;
   border: 1px solid black;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
   align-items: center;
+  text-align: left;
+  font-family: "PT Sans", sans-serif;
+
+  h3 {
+    width: 30%;
+    padding-left: 40px;
+  }
+
+  .price {
+    width: 20%;
+  }
+
+  .qty {
+    width: 20%;
+  }
 }

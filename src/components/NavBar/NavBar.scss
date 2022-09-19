@@ -5,6 +5,12 @@
   justify-content: space-between;
   background: rgb(137, 255, 147);
   align-items: center;
+  .navLink {
+    padding-right: 20px;
+    text-decoration: none;
+    color: black;
+    font-family: "PT Sans", sans-serif;
+  }
 
   h1 {
     padding-left: 50px;
@@ -14,10 +20,13 @@
     list-style-type: none;
     display: flex;
     align-items: center;
+    padding-right: 4vw;
 
     .navLink {
       padding-right: 20px;
       text-decoration: none;
+      font-family: "PT Sans", sans-serif;
+      font-weight: 700;
     }
   }
 }

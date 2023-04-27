@@ -24,6 +24,10 @@ const Cart = () => {
     );
   }, []);
 
+  const handleBkashClick = () => {
+    alert("You need to be a Bkash Merchant to use Bkash API on Website.");
+  };
+
   return (
     <div className="cart">
       <h1>Cart</h1>
@@ -44,7 +48,9 @@ const Cart = () => {
       <div className="paymentOptions">
         <p>Pay with: </p>
         <SSLPayment totalValue={total} />
-        <button className="paymentBtn">Bkash</button>
+        <button className="paymentBtn" onClick={handleBkashClick}>
+          Bkash
+        </button>
       </div>
     </div>
   );
